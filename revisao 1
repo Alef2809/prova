@@ -1,0 +1,76 @@
+import datetime
+import time
+horas_agora = datetime.datetime.now()
+horas = int(horas_agora.hour)
+#if e utilizado para verificar se uma condição é verdadeira e executa-la em caso afirmativo.
+if horas >= 6 and horas <= 12:
+    print("Bom dia")
+#elif permite verificar várias condições após a verificação do if.
+# se caso o if for falso, o codigo seguinte elif sera verificado, se o mesmo for verdadeiro, sera executado.
+elif horas >= 12 and horas <= 18:
+    print("Boa tarde")
+elif horas >= 18 and horas <= 24:
+    print("Boa noite")
+#else é executado caso if ou elif não sejam verdadeiros.
+else:
+    print("Já está tarde, seria bom ir dormir")
+print(horas_agora.hour,":", horas_agora.minute,":", horas_agora.second)
+#print
+![Captura de tela 2024-11-24 131825](https://github.com/user-attachments/assets/15bd2168-9f9b-407d-83bd-be5c62694fc1)
+#Descrever a utilização da estrutura de repetição while em Python
+poltronas = 0
+passageiros = 0
+#o while permite que o bloco seja repetido diversas vezes, caso a condição seja verdadeira.
+while poltronas < 36:
+    passageiros = int(input("Quantos passageiros embarcaram ? "))
+    poltronas = poltronas + passageiros
+else:
+    print("Espaço limite atingido, por favor espere o próximo ônibus.")
+#Descrever a utilização da estrutura de repetição for em Python
+#for é utilizado para repetir determinadas vezes o códigos dentro de um parametro.
+for i in range(0,passageiros):
+    print(i)
+else:
+    print(passageiros)
+    print("Ultimos passageiros")
+#print 
+![Captura de tela 2024-11-24 132156](https://github.com/user-attachments/assets/129b2e0e-b241-4571-9c1c-318042931de4)
+#Descrever a utilização de funções em Python
+valor_da_passagem = 22.5
+print("Preço da passagem: ",valor_da_passagem)
+#def é uma função que cria blocos para fins específicos, que podem ser utilizado varias vezes em um código.
+def inposto(valor_da_passagem):
+    return valor_da_passagem * 0.7
+total = valor_da_passagem + inposto(valor_da_passagem)
+print(inposto(valor_da_passagem), "inposto")
+print("valor total:", total)
+#Descrever a utilização argumentos de funções no Python
+loginUsuario = input("Quem está acessando essa maquina? ")
+if loginUsuario.lower() == "admin":
+    print("Seja bem vido ADM!")
+else:
+    print("Seja bem vido usuario!")
+#print
+![Captura de tela 2024-11-24 132324](https://github.com/user-attachments/assets/d4cde403-b2d6-413b-a472-8924cc48eba8)
+#cauculadora
+num1 = 0
+num2 = 0
+ope = ''
+resultado = 0
+while True:
+   num1 = int(input('digite o primeiro numero: '))
+   num2 = int(input('digite o segundo numero: '))
+   ope = input('digite o operador: ')
+   if ope == '+':
+      resultado = num1 + num2
+   elif ope == '-':
+      resultado = num1 - num2
+   elif ope == '/':
+      resultado = num1 / num2
+   elif ope == '*':
+      resultado = num1 * num2
+   else:
+      resultado = "operação invalida"
+   print(resultado)
+#print
+![Captura de tela 2024-11-24 134056](https://github.com/user-attachments/assets/b1658ffd-f32f-4bb1-804c-05b19d23041f)
